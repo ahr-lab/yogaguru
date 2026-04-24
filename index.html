@@ -5,8 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <title>Dr. Pijush Mondal | Holistic Yoga Guru, Ayurveda Doctorate & Naturopath Healer</title>
-    <meta name="description" content="Unlock whole-person healing with Dr. Pijush Mondal, a certified Yoga Guru (PGDYT), expert in Panchgavya Ayurveda & Naturopathy. Integrate breath, DOSHA analysis, and kinetic wisdom for true vitality. Champahati, West Bengal.">
-    <link rel="canonical" href="https://yoga-divine.pages.dev/">
+    <meta name="description" content="Unlock whole-person healing with Dr. Pijush Mondal, a certified Yoga Guru (PGDYT), expert in Panchgavya Ayurveda & Naturopathy.">
 
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -36,11 +35,24 @@
         body { font-family: 'Inter', sans-serif; background-color: #F8F9FA; }
         .gsap-reveal { opacity: 0; visibility: hidden; }
         .hero-bg {
-            /* Kept hero placeholder; will update later during fine-tuning as requested. */
-            background-image: linear-gradient(to right, rgba(27, 67, 50, 0.95), rgba(217, 119, 6, 0.85)), url('https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80');
+            /* Now using your exact generated Yoga Mastery image for the hero background */
+            background-image: linear-gradient(to right, rgba(27, 67, 50, 0.95), rgba(217, 119, 6, 0.85)), url('/asset/images/yoga_mastery.png');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
+        }
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out, padding 0.3s ease;
+        }
+        .faq-item.active .faq-answer {
+            max-height: 200px;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+        }
+        .faq-item.active .faq-icon {
+            transform: rotate(180deg);
         }
     </style>
 </head>
@@ -61,10 +73,10 @@
                 
                 <div class="hidden md:flex space-x-8 items-center">
                     <a href="#about" class="text-clinical-slate hover:text-clinical-teal font-medium transition-colors">About</a>
+                    <a href="#why-us" class="text-clinical-slate hover:text-clinical-teal font-medium transition-colors">Why Dr. Mondal</a>
                     <a href="#services" class="text-clinical-slate hover:text-clinical-teal font-medium transition-colors">Expertise</a>
-                    <a href="#reviews" class="text-clinical-slate hover:text-clinical-teal font-medium transition-colors">Success Stories</a>
-                    <a href="#chambers" class="text-clinical-slate hover:text-clinical-teal font-medium transition-colors">Clinics</a>
-                    <a href="#contact" class="bg-clinical-teal hover:bg-amber-600 text-white px-6 py-2.5 rounded-full font-medium transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5">Contact Us</a>
+                    <a href="#reviews" class="text-clinical-slate hover:text-clinical-teal font-medium transition-colors">Reviews</a>
+                    <a href="#book-now" class="bg-clinical-teal hover:bg-amber-600 text-white px-6 py-2.5 rounded-full font-medium transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5">Book Now</a>
                 </div>
 
                 <div class="md:hidden flex items-center">
@@ -78,10 +90,10 @@
         <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-gray-100 absolute w-full shadow-xl">
             <div class="px-4 pt-2 pb-6 space-y-2">
                 <a href="#about" class="block px-3 py-3 rounded-md text-base font-medium text-clinical-slate hover:text-clinical-blue hover:bg-gray-50">About</a>
+                <a href="#why-us" class="block px-3 py-3 rounded-md text-base font-medium text-clinical-slate hover:text-clinical-blue hover:bg-gray-50">Why Dr. Mondal</a>
                 <a href="#services" class="block px-3 py-3 rounded-md text-base font-medium text-clinical-slate hover:text-clinical-blue hover:bg-gray-50">Expertise</a>
-                <a href="#reviews" class="block px-3 py-3 rounded-md text-base font-medium text-clinical-slate hover:text-clinical-blue hover:bg-gray-50">Success Stories</a>
-                <a href="#chambers" class="block px-3 py-3 rounded-md text-base font-medium text-clinical-slate hover:text-clinical-blue hover:bg-gray-50">Clinics</a>
-                <a href="#contact" class="block px-3 py-3 mt-4 text-center rounded-md text-base font-medium bg-clinical-teal text-white hover:bg-amber-600">Contact Us</a>
+                <a href="#reviews" class="block px-3 py-3 rounded-md text-base font-medium text-clinical-slate hover:text-clinical-blue hover:bg-gray-50">Reviews</a>
+                <a href="#book-now" class="block px-3 py-3 mt-4 text-center rounded-md text-base font-medium bg-clinical-teal text-white hover:bg-amber-600">Book Now</a>
             </div>
         </div>
     </nav>
@@ -99,11 +111,11 @@
                         <span class="text-amber-400">Yoga Mastery.</span>
                     </h1>
                     <p class="gsap-reveal text-lg md:text-xl text-green-50 mb-10 leading-relaxed max-w-2xl">
-                        Transform your physical and mental well-being under the guidance of <strong class="text-white font-semibold">Dr. Pijush Mondal</strong>, a certified **Yoga Guru** (PGDYT), expert in Panchgavya Ayurveda & Naturopathy. Optimized for modern wellness and rooted in traditional science.
+                        Transform your physical and mental well-being under the guidance of <strong class="text-white font-semibold">Dr. Pijush Mondal</strong>, a certified Yoga Guru (PGDYT), expert in Panchgavya Ayurveda & Naturopathy.
                     </p>
                     
                     <div class="gsap-reveal flex flex-col sm:flex-row gap-4">
-                        <a href="#contact" class="flex items-center justify-center gap-2 bg-clinical-teal hover:bg-amber-600 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+                        <a href="#book-now" class="flex items-center justify-center gap-2 bg-clinical-teal hover:bg-amber-600 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-1">
                             <i class="fa-solid fa-calendar-check"></i> Book Consultation
                         </a>
                         <a href="#services" class="flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 text-white border border-white/30 px-8 py-4 rounded-full font-semibold text-lg transition-all shadow-sm backdrop-blur-sm transform hover:-translate-y-1">
@@ -112,7 +124,7 @@
                     </div>
                 </div>
                 <div class="gsap-reveal relative rounded-2xl overflow-hidden shadow-2xl border-4 border-white/20 transform lg:-rotate-2 hover:rotate-0 transition-all duration-500">
-                    <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Dr. Mondal Yoga Mastery" class="w-full h-auto object-cover hover:scale-105 transition-transform duration-700">
+                    <img src="/asset/images/yoga_mastery.png" alt="Dr. Mondal Yoga Mastery" class="w-full h-auto object-cover hover:scale-105 transition-transform duration-700">
                 </div>
             </div>
         </div>
@@ -140,6 +152,33 @@
         </div>
     </section>
 
+    <section id="why-us" class="py-20 bg-orange-50 border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <h2 class="gsap-reveal text-clinical-teal font-semibold tracking-wide uppercase mb-2">The Holistic Advantage</h2>
+                <h3 class="gsap-reveal text-3xl md:text-4xl font-bold text-clinical-blue">Why Choose Dr. Mondal?</h3>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="gsap-reveal bg-white p-8 rounded-2xl shadow-sm border border-orange-100 text-center">
+                    <div class="w-16 h-16 bg-amber-50 text-clinical-teal rounded-full flex items-center justify-center text-2xl mx-auto mb-6"><i class="fa-solid fa-bullseye"></i></div>
+                    <h4 class="text-xl font-bold text-clinical-blue mb-3">Root Cause Focus</h4>
+                    <p class="text-gray-600 text-sm">We don't just mask symptoms. Through deep Dosha analysis and kinetic profiling, we identify and treat the foundational origin of your ailment.</p>
+                </div>
+                <div class="gsap-reveal bg-white p-8 rounded-2xl shadow-sm border border-orange-100 text-center">
+                    <div class="w-16 h-16 bg-green-50 text-clinical-blue rounded-full flex items-center justify-center text-2xl mx-auto mb-6"><i class="fa-solid fa-code-branch"></i></div>
+                    <h4 class="text-xl font-bold text-clinical-blue mb-3">Integrative Mastery</h4>
+                    <p class="text-gray-600 text-sm">Combining the clinical precision of a Medical Doctorate in Panchgavya Ayurveda with the biomechanical expertise of a PGDYT Certified Yoga Guru.</p>
+                </div>
+                <div class="gsap-reveal bg-white p-8 rounded-2xl shadow-sm border border-orange-100 text-center">
+                    <div class="w-16 h-16 bg-blue-50 text-clinical-slate rounded-full flex items-center justify-center text-2xl mx-auto mb-6"><i class="fa-solid fa-shield-halved"></i></div>
+                    <h4 class="text-xl font-bold text-clinical-blue mb-3">Proven & Safe</h4>
+                    <p class="text-gray-600 text-sm">Lifetime registered with CBAM and multiple national Ayurveda boards. 100% natural, non-invasive therapeutic modalities with a proven track record.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section id="services" class="py-24 bg-white relative">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-2xl mx-auto mb-16">
@@ -152,19 +191,18 @@
                 <div class="gsap-reveal group bg-white rounded-3xl border border-gray-100 shadow-md hover:shadow-2xl transition-all duration-300 overflow-hidden flex flex-col">
                     <div class="h-48 overflow-hidden relative">
                         <div class="absolute inset-0 bg-clinical-blue/20 group-hover:bg-transparent transition-all z-10"></div>
-                        <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" alt="Yoga Mastery">
+                        <img src="/asset/images/yoga_mastery.png" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" alt="Yoga Mastery">
                     </div>
                     <div class="p-8 flex-grow">
                         <div class="flex items-center gap-4 mb-6">
                             <div class="w-12 h-12 bg-green-50 rounded-xl flex items-center justify-center text-clinical-blue text-xl"><i class="fa-solid fa-om"></i></div>
                             <h4 class="text-2xl font-bold text-clinical-blue">Yoga Guru Authority</h4>
                         </div>
-                        <p class="text-gray-600 mb-6 text-sm">Certified Yoga Guru (PGDYT), specializing in breath mastery, specialized asanas, and Naturopathic techniques that harness the body's self-healing mechanisms for optimal wellness.</p>
+                        <p class="text-gray-600 mb-6 text-sm">Certified Yoga Guru (PGDYT), specializing in breath mastery, specialized asanas, and Naturopathic techniques that harness the body's self-healing mechanisms.</p>
                         <ul class="space-y-3 text-sm font-medium text-clinical-slate">
                             <li class="flex items-start gap-3"><i class="fa-solid fa-check-circle text-clinical-teal mt-0.5"></i><span>Certified Yoga Therapy (PGDYT)</span></li>
                             <li class="flex items-start gap-3"><i class="fa-solid fa-check-circle text-clinical-teal mt-0.5"></i><span>Stress & Anxiety Resolution</span></li>
                             <li class="flex items-start gap-3"><i class="fa-solid fa-check-circle text-clinical-teal mt-0.5"></i><span>Naturopathic Elemental Therapy</span></li>
-                            <li class="flex items-start gap-3"><i class="fa-solid fa-check-circle text-clinical-teal mt-0.5"></i><span>Metabolic and Immune Correction</span></li>
                         </ul>
                     </div>
                 </div>
@@ -172,19 +210,18 @@
                 <div class="gsap-reveal group bg-white rounded-3xl border border-gray-100 shadow-md hover:shadow-2xl transition-all duration-300 overflow-hidden flex flex-col">
                     <div class="h-48 overflow-hidden relative">
                         <div class="absolute inset-0 bg-clinical-blue/20 group-hover:bg-transparent transition-all z-10"></div>
-                        <img src="https://images.unsplash.com/photo-1608248543803-ba4f8c70ae0b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" alt="Panchgavya Ayurveda">
+                        <img src="/asset/images/ayurveda_expert.png" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" alt="Panchgavya Ayurveda">
                     </div>
                     <div class="p-8 flex-grow">
                         <div class="flex items-center gap-4 mb-6">
                             <div class="w-12 h-12 bg-amber-50 rounded-xl flex items-center justify-center text-clinical-teal text-xl"><i class="fa-solid fa-mortar-pestle"></i></div>
                             <h4 class="text-2xl font-bold text-clinical-blue">Ayurveda Doctorate</h4>
                         </div>
-                        <p class="text-gray-600 mb-6 text-sm">Doctorate expertise in Panchgavya Ayurveda, using specific herbs and unique elemental compounds to treat the underlying Dosha imbalance and foundational health causes.</p>
+                        <p class="text-gray-600 mb-6 text-sm">Doctorate expertise in Panchgavya Ayurveda, using specific herbs and unique elemental compounds to treat the underlying Dosha imbalance.</p>
                         <ul class="space-y-3 text-sm font-medium text-clinical-slate">
                             <li class="flex items-start gap-3"><i class="fa-solid fa-check-circle text-clinical-teal mt-0.5"></i><span>Chronic Metabolic Management</span></li>
                             <li class="flex items-start gap-3"><i class="fa-solid fa-check-circle text-clinical-teal mt-0.5"></i><span>Unique Panchgavya Formulations</span></li>
                             <li class="flex items-start gap-3"><i class="fa-solid fa-check-circle text-clinical-teal mt-0.5"></i><span>Immunity Boosting Protocols</span></li>
-                            <li class="flex items-start gap-3"><i class="fa-solid fa-check-circle text-clinical-teal mt-0.5"></i><span>Natural Dietary Plans</span></li>
                         </ul>
                     </div>
                 </div>
@@ -192,19 +229,18 @@
                 <div class="gsap-reveal group bg-white rounded-3xl border border-gray-100 shadow-md hover:shadow-2xl transition-all duration-300 overflow-hidden flex flex-col">
                     <div class="h-48 overflow-hidden relative">
                         <div class="absolute inset-0 bg-clinical-blue/20 group-hover:bg-transparent transition-all z-10"></div>
-                        <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" alt="Healing Massage">
+                        <img src="/asset/images/massage_release.png" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" alt="Healing Massage">
                     </div>
                     <div class="p-8 flex-grow">
                         <div class="flex items-center gap-4 mb-6">
                             <div class="w-12 h-12 bg-amber-50 rounded-xl flex items-center justify-center text-clinical-teal text-xl"><i class="fa-solid fa-spa"></i></div>
                             <h4 class="text-2xl font-bold text-clinical-blue">Healing Massage</h4>
                         </div>
-                        <p class="text-gray-600 mb-6 text-sm">Combining clinical deep tissue expertise with therapeutic Ayurvedic massage to release musculoskeletal blockages, improving circulation, and kinetic restoration.</p>
+                        <p class="text-gray-600 mb-6 text-sm">Combining clinical deep tissue expertise with therapeutic Ayurvedic massage to release musculoskeletal blockages and improve circulation.</p>
                         <ul class="space-y-3 text-sm font-medium text-clinical-slate">
                             <li class="flex items-start gap-3"><i class="fa-solid fa-check-circle text-clinical-teal mt-0.5"></i><span>Myofascial Trigger Point Therapy</span></li>
                             <li class="flex items-start gap-3"><i class="fa-solid fa-check-circle text-clinical-teal mt-0.5"></i><span>Joint Pain Relief Protocol</span></li>
                             <li class="flex items-start gap-3"><i class="fa-solid fa-check-circle text-clinical-teal mt-0.5"></i><span>Deep Muscular Relaxation</span></li>
-                            <li class="flex items-start gap-3"><i class="fa-solid fa-check-circle text-clinical-teal mt-0.5"></i><span>Post-Injury Kinetic Support</span></li>
                         </ul>
                     </div>
                 </div>
@@ -212,18 +248,17 @@
                 <div class="gsap-reveal group bg-white rounded-3xl border border-gray-100 shadow-md hover:shadow-2xl transition-all duration-300 overflow-hidden flex flex-col">
                     <div class="h-48 overflow-hidden relative">
                         <div class="absolute inset-0 bg-clinical-blue/20 group-hover:bg-transparent transition-all z-10"></div>
-                        <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" alt="Physiotherapy">
+                        <img src="/asset/images/integrative_care.png" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" alt="Physiotherapy">
                     </div>
                     <div class="p-8 flex-grow">
                         <div class="flex items-center gap-4 mb-6">
                             <div class="w-12 h-12 bg-green-50 rounded-xl flex items-center justify-center text-clinical-blue text-xl"><i class="fa-solid fa-hands-holding-circle"></i></div>
                             <h4 class="text-2xl font-bold text-clinical-blue">Integrative Care</h4>
                         </div>
-                        <p class="text-gray-600 mb-6 text-sm">Using clinical kinetic chain analysis, joint mobilization, and postural correction techniques to address root cause physical restrictions and prepare you for sustainable recovery.</p>
+                        <p class="text-gray-600 mb-6 text-sm">Using clinical kinetic chain analysis, joint mobilization, and postural correction techniques to prepare you for sustainable recovery.</p>
                         <ul class="space-y-3 text-sm font-medium text-clinical-slate">
                             <li class="flex items-start gap-3"><i class="fa-solid fa-check-circle text-clinical-teal mt-0.5"></i><span>Spine & Joint Stabilization</span></li>
                             <li class="flex items-start gap-3"><i class="fa-solid fa-check-circle text-clinical-teal mt-0.5"></i><span>Manual Therapy Modalities</span></li>
-                            <li class="flex items-start gap-3"><i class="fa-solid fa-check-circle text-clinical-teal mt-0.5"></i><span>Chronic Pain Relief Modalities</span></li>
                             <li class="flex items-start gap-3"><i class="fa-solid fa-check-circle text-clinical-teal mt-0.5"></i><span>Kinetic Chain Analysis</span></li>
                         </ul>
                     </div>
@@ -232,83 +267,91 @@
         </div>
     </section>
 
-    <section id="reviews" class="py-24 bg-orange-50 border-y border-orange-100">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-2xl mx-auto mb-16">
-                <h2 class="gsap-reveal text-clinical-teal font-semibold tracking-wide uppercase mb-2">Patient Feedback</h2>
-                <h3 class="gsap-reveal text-3xl md:text-4xl font-bold text-clinical-blue">Led by Yoga Guru Expertise</h3>
+    <section class="py-20 bg-clinical-light border-y border-gray-200">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="gsap-reveal text-clinical-teal font-semibold tracking-wide uppercase mb-2">Common Questions</h2>
+                <h3 class="gsap-reveal text-3xl font-bold text-clinical-blue">Frequently Asked Questions</h3>
             </div>
-
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="gsap-reveal bg-white p-8 rounded-2xl shadow-sm border border-gray-100 relative">
-                    <i class="fa-solid fa-quote-right absolute top-6 right-6 text-4xl text-amber-100"></i>
-                    <div class="flex text-amber-400 text-sm mb-4">
-                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                    </div>
-                    <p class="text-gray-600 italic mb-6">"Our entire family trusts Dr. Mondal for everything from common ailments to advanced recovery. He addresses the root cause using natural, non-invasive methods, always leading with a holistic philosophy."</p>
-                    <div class="flex items-center gap-3">
-                        <div class="w-10 h-10 bg-green-600 text-white rounded-full flex items-center justify-center font-bold">B</div>
-                        <div>
-                            <h5 class="font-bold text-clinical-blue text-sm">Biswajit Kar</h5>
-                            <p class="text-xs text-gray-400">Champahati</p>
-                        </div>
+            <div class="space-y-4">
+                <div class="faq-item bg-white border border-gray-200 rounded-xl overflow-hidden shadow-sm transition-all">
+                    <button class="w-full px-6 py-4 text-left flex justify-between items-center focus:outline-none" onclick="this.parentElement.classList.toggle('active')">
+                        <span class="font-bold text-clinical-blue">What should I expect during my first consultation?</span>
+                        <i class="fa-solid fa-chevron-down faq-icon transition-transform text-clinical-teal"></i>
+                    </button>
+                    <div class="faq-answer px-6 text-gray-600 text-sm bg-gray-50 border-t border-gray-100">
+                        Your first visit includes a comprehensive Dosha analysis, a postural/kinetic assessment, and a detailed discussion of your medical history to uncover the root cause of your concerns.
                     </div>
                 </div>
-
-                <div class="gsap-reveal bg-white p-8 rounded-2xl shadow-sm border border-gray-100 relative">
-                    <i class="fa-solid fa-quote-right absolute top-6 right-6 text-4xl text-amber-100"></i>
-                    <div class="flex text-amber-400 text-sm mb-4">
-                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                    </div>
-                    <p class="text-gray-600 italic mb-6">"Dr. Mondal analyzed my Dosha and gave me simple dietary and Panchgavya elemental therapy that restored my foundational metabolic health after years of suffering."</p>
-                    <div class="flex items-center gap-3">
-                        <div class="w-10 h-10 bg-clinical-teal text-white rounded-full flex items-center justify-center font-bold">S</div>
-                        <div>
-                            <h5 class="font-bold text-clinical-blue text-sm">Sunita Bose</h5>
-                            <p class="text-xs text-gray-400">Sonarpur</p>
-                        </div>
+                <div class="faq-item bg-white border border-gray-200 rounded-xl overflow-hidden shadow-sm transition-all">
+                    <button class="w-full px-6 py-4 text-left flex justify-between items-center focus:outline-none" onclick="this.parentElement.classList.toggle('active')">
+                        <span class="font-bold text-clinical-blue">Is therapeutic yoga different from regular fitness yoga?</span>
+                        <i class="fa-solid fa-chevron-down faq-icon transition-transform text-clinical-teal"></i>
+                    </button>
+                    <div class="faq-answer px-6 text-gray-600 text-sm bg-gray-50 border-t border-gray-100">
+                        Yes. As a PGDYT certified Guru, Dr. Mondal uses specific clinical asanas and breathwork tailored strictly to heal specific ailments (like hypertension, joint pain, or anxiety), rather than general fitness.
                     </div>
                 </div>
-
-                <div class="gsap-reveal bg-white p-8 rounded-2xl shadow-sm border border-gray-100 relative">
-                    <i class="fa-solid fa-quote-right absolute top-6 right-6 text-4xl text-amber-100"></i>
-                    <div class="flex text-amber-400 text-sm mb-4">
-                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                    </div>
-                    <p class="text-gray-600 italic mb-6">"My chronic low back pain is completely gone after following Dr. Mondal's personalized therapeutic yoga and massage regimen. It's holistic recovery, not just a physical fix."</p>
-                    <div class="flex items-center gap-3">
-                        <div class="w-10 h-10 bg-clinical-blue text-white rounded-full flex items-center justify-center font-bold">R</div>
-                        <div>
-                            <h5 class="font-bold text-clinical-blue text-sm">Rahul Sen</h5>
-                            <p class="text-xs text-gray-400">Baruipur</p>
-                        </div>
+                <div class="faq-item bg-white border border-gray-200 rounded-xl overflow-hidden shadow-sm transition-all">
+                    <button class="w-full px-6 py-4 text-left flex justify-between items-center focus:outline-none" onclick="this.parentElement.classList.toggle('active')">
+                        <span class="font-bold text-clinical-blue">Do you treat chronic physical pain?</span>
+                        <i class="fa-solid fa-chevron-down faq-icon transition-transform text-clinical-teal"></i>
+                    </button>
+                    <div class="faq-answer px-6 text-gray-600 text-sm bg-gray-50 border-t border-gray-100">
+                        Absolutely. We combine Integrative Physiotherapy (manual adjustments) with Healing Massage and Ayurvedic pain-relief oils to provide long-lasting, natural relief from chronic musculoskeletal pain.
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="chambers" class="py-24 bg-clinical-light border-b border-gray-200">
+    <section id="book-now" class="py-24 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex flex-col md:flex-row justify-between items-end mb-12 border-b border-gray-200 pb-6 gap-6">
-                <div>
-                    <h2 class="gsap-reveal text-clinical-teal font-semibold tracking-wide uppercase mb-2">Locations</h2>
-                    <h3 class="gsap-reveal text-3xl md:text-4xl font-bold text-clinical-blue">Consultation Centers</h3>
-                </div>
-                <div class="gsap-reveal flex items-center gap-2 text-clinical-slate bg-white px-4 py-2 rounded-full shadow-sm border border-gray-100">
-                    <i class="fa-solid fa-map-location-dot text-clinical-teal"></i>
-                    <span class="font-medium text-sm">Serving Champahati & Sonarpur Region</span>
-                </div>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div class="gsap-reveal bg-white p-6 rounded-xl shadow-sm border border-gray-100 flex items-start gap-4 hover:border-clinical-teal hover:shadow-md transition-all lg:col-span-3">
-                    <div class="w-12 h-12 bg-amber-50 text-clinical-teal rounded-full flex items-center justify-center flex-shrink-0 text-xl"><i class="fa-solid fa-om"></i></div>
-                    <div>
-                        <h4 class="font-bold text-clinical-blue text-lg">Main Healing Center & Ashram</h4>
-                        <p class="text-clinical-slate text-sm mt-1 flex items-center gap-1"><i class="fa-solid fa-location-arrow text-gray-400 text-xs"></i> Champahati, Sonarpur Region, West Bengal</p>
-                        <p class="text-xs text-gray-500 mt-2">Specializing in unique, natural joint-correction therapy and comprehensive Yoga mastery care.</p>
+            <div class="bg-clinical-blue rounded-3xl overflow-hidden shadow-2xl flex flex-col lg:flex-row">
+                <div class="lg:w-5/12 p-10 lg:p-14 bg-gradient-to-br from-clinical-blue to-[#0F291E] text-white flex flex-col justify-center">
+                    <h3 class="text-3xl font-bold mb-4">Start Your Healing Journey</h3>
+                    <p class="text-green-100 mb-8 leading-relaxed">Fill out the form to request a consultation. Our team will contact you to schedule an appropriate time for your physical or holistic assessment.</p>
+                    <div class="space-y-4">
+                        <div class="flex items-center gap-4">
+                            <div class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center"><i class="fa-solid fa-phone text-amber-400"></i></div>
+                            <span class="font-medium">+91 91230 17736</span>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <div class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center"><i class="fa-solid fa-location-dot text-amber-400"></i></div>
+                            <span class="font-medium">Champahati, Sonarpur Region</span>
+                        </div>
                     </div>
+                </div>
+                <div class="lg:w-7/12 p-10 lg:p-14 bg-white">
+                    <form class="space-y-6" action="#" method="POST">
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">Full Name</label>
+                                <input type="text" class="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-clinical-teal focus:ring-2 focus:ring-amber-100 outline-none transition-all" placeholder="John Doe">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">Phone Number</label>
+                                <input type="tel" class="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-clinical-teal focus:ring-2 focus:ring-amber-100 outline-none transition-all" placeholder="+91 xxxxx xxxxx">
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Primary Health Concern</label>
+                            <select class="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-clinical-teal focus:ring-2 focus:ring-amber-100 outline-none transition-all bg-white">
+                                <option>Select a category...</option>
+                                <option>Yoga Therapy / Chronic Stress</option>
+                                <option>Ayurvedic Detox / Digestion</option>
+                                <option>Joint / Muscle Pain (Physiotherapy)</option>
+                                <option>General Wellness Consultation</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Brief Description</label>
+                            <textarea rows="3" class="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-clinical-teal focus:ring-2 focus:ring-amber-100 outline-none transition-all resize-none" placeholder="Tell us briefly about your symptoms..."></textarea>
+                        </div>
+                        <button type="button" class="w-full bg-clinical-teal hover:bg-amber-600 text-white font-bold py-4 rounded-lg shadow-md hover:shadow-lg transition-all transform hover:-translate-y-0.5">
+                            Request Appointment
+                        </button>
+                    </form>
                 </div>
             </div>
         </div>
@@ -328,13 +371,13 @@
                         </div>
                     </div>
                     <p class="text-green-100 leading-relaxed mb-6">
-                        Integrating natural medicine, DOSHA analysis, posture mastery, and kinetic insight to map and resolve FOUNDATIONAL imbalances. Restore your true whole-person vitality.
+                        Integrating natural medicine, DOSHA analysis, posture mastery, and kinetic insight to map and resolve FOUNDATIONAL imbalances.
                     </p>
                 </div>
 
                 <div class="lg:col-span-2 grid sm:grid-cols-2 gap-8">
                     <div>
-                        <h4 class="text-lg font-semibold mb-6 text-white uppercase tracking-wider text-sm border-b border-white/10 pb-3">Book an Appointment</h4>
+                        <h4 class="text-lg font-semibold mb-6 text-white uppercase tracking-wider text-sm border-b border-white/10 pb-3">Quick Contact</h4>
                         <ul class="space-y-4">
                             <li>
                                 <a href="tel:9123017736" class="flex items-center gap-3 text-green-100 hover:text-white transition-colors group">
